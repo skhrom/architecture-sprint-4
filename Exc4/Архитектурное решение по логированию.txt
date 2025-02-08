@@ -61,5 +61,6 @@ ERROR - ошибки системы, которые не должны возни
 - и т.п.
 
 
-
+Диаграмма
+https://drive.google.com/file/d/1tFbelF9XxkzJpCqN4xt0FYSQQHdKZOBm/view?usp=sharing
 

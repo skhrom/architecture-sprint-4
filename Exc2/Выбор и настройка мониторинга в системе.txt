@@ -1,0 +1,50 @@
+Мотивация
+
+Получить полное представление о работе системы, чтобы было проще обеспечить ее безопасность.
+Более быстрое определение проблем, а следовательно и более быстрое их решение, а также предотвращение в будущем.
+Выявить в системе места с низкой производительностью.
+Ускорение рабочего процесса и DevOps. Наблюдаемость способствует оптимизации процессов и сокращению количества ошибок. А это, в свою очередь, помогает ускорить рабочий процесс и улучшить взаимодействие между командами.
+Получение необходимых бизнес метрик
+
+Выбор подхода к мониторингу
+
+Использовать RED подход для мониторинга.
+Но также для каждого сервиса и БД, необходимо собирать системные метрики (загрузка ЦПУ, ОЗУ и т.п.).
+
+Предполагаемый список метрик
+Для отслеживания нагрузки на каждый из сервисов:
+Number of requests (RPS) for internet shop API
+Number of requests (RPS) for CRM API
+Number of requests (RPS) for MES API
+Для отслеживания возможных DDOS атак, добавить ярлык ip-address
+Number of requests (RPS) per user for internet shop API
+Number of requests (RPS) per user for CRM API
+Number of requests (RPS) per user for MES API
+Для отслеживания загрузки CPU, и решения проблемы в случае большой загрузки
+CPU % for shop API
+CPU % for CRM API
+CPU % for MES API
+Для понимания скорости обработки запросов
+Response time (latency) for shop API
+Response time (latency) for CRM API
+Response time (latency) for MES API
+Для выявления ошибок и их количество по сравнению с 200-ми запросами
+Number of HTTP 200 for shop API
+Number of HTTP 200 for CRM API
+Number of HTTP 200 for MES API
+Number of HTTP 500 for shop API
+Number of HTTP 500 for CRM API
+Number of HTTP 500 for MES API
+Number of HTTP 500 for shop API
+
+План действий.
+1) Развернуть сервер Prometheus, который включает в себя БД временных рядов
+2) Для каждого сервиса добавить клиентскую библиотеку Prometheus. Выполнить необходимые настройки.
+3) Настроить Alert
+4) Проверить, что метрики пишутся со всех сервисов
+5) Развернуть Grafana
+6) Настроить взаимодействие Grafana с Prometheus
+7) Настроить dashboards
+8) Проверить, что dashboards отображают нужные метрики
+
+
